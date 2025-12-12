@@ -1,0 +1,23 @@
+{
+  "short_name": "山海关导览",
+  "name": "秦皇岛山海关智慧导览",
+  "id": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "https://api.iconify.design/game-icons:great-wall.svg?color=%23991b1b",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "https://api.iconify.design/game-icons:great-wall.svg?color=%23991b1b",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#991b1b",
+  "background_color": "#fef3c7"
+}
