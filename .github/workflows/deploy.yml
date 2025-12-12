@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just building
+  # Single deploy job
   deploy:
     environment:
       name: github-pages
@@ -37,9 +37,6 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      # FIX: Use 'npm install' instead of 'npm ci'
-      # 'npm ci' fails if package-lock.json is missing or out of sync.
-      # 'npm install' will automatically generate/update the lockfile and install dependencies correctly.
       - name: Install dependencies
         run: npm install
 
