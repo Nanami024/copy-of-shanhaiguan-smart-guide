@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          
 
       - name: Install dependencies
         # 强制清理环境，确保每次都是全新安装，解决依赖不完整的问题
