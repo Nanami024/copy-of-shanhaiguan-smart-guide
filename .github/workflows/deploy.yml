@@ -38,7 +38,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        # 强制清理环境，确保每次都是全新安装，解决依赖不完整的问题
+        run: |
+          rm -rf node_modules
+          rm -rf package-lock.json
+          npm install
 
       - name: Build
         run: npm run build
@@ -53,4 +57,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deployment-pages@v4
+        uses: actions/deploy-pages@v4
