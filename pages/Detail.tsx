@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { appData } from '../data';
-import { ChevronLeftIcon, PlayIcon, PauseIcon, PencilIcon } from '../components/Icon';
+import { ChevronLeftIcon, PlayIcon, PauseIcon, PencilIcon, StopIcon } from '../components/Icon';
 
 interface Comment {
   id: number;
@@ -59,6 +59,15 @@ const Detail: React.FC = () => {
     setIsPlaying(!isPlaying);
   };
   
+  // New: Stop Audio Function
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset progress
+      setIsPlaying(false);
+    }
+  };
+  
   useEffect(() => {
     return () => {
       if (audioRef.current) audioRef.current.pause();
@@ -107,13 +116,23 @@ const Detail: React.FC = () => {
           {/* Audio Player Bar */}
           <div className="flex items-center justify-between bg-white border border-gray-100 p-4 rounded-xl mb-6 shadow-sm">
             <div className="text-sm text-gray-600 font-medium">语音讲解</div>
-            <button 
-              onClick={toggleAudio}
-              className="flex items-center gap-2 bg-cinnabar text-white px-4 py-2 rounded-lg shadow hover:bg-cinnabar-light transition-colors"
-            >
-              {isPlaying ? <PauseIcon className="w-5 h-5" /> : <PlayIcon className="w-5 h-5" />}
-              <span className="text-sm font-bold">{isPlaying ? "暂停" : "播放"}</span>
-            </button>
+            <div className="flex gap-2">
+              <button 
+                onClick={toggleAudio}
+                className="flex items-center gap-2 bg-cinnabar text-white px-4 py-2 rounded-lg shadow hover:bg-cinnabar-light transition-colors"
+              >
+                {isPlaying ? <PauseIcon className="w-5 h-5" /> : <PlayIcon className="w-5 h-5" />}
+                <span className="text-sm font-bold">{isPlaying ? "暂停" : "播放"}</span>
+              </button>
+              
+              {/* Stop Button */}
+              <button 
+                onClick={stopAudio}
+                className="flex items-center gap-2 bg-stone-100 text-stone-600 px-3 py-2 rounded-lg shadow-sm border border-stone-200 hover:bg-stone-200 transition-colors"
+              >
+                <StopIcon className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           <h2 className="text-lg font-bold text-gray-900 mb-2 border-l-4 border-cinnabar pl-3">简介</h2>
