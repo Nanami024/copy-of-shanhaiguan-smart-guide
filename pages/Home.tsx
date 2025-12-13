@@ -68,7 +68,7 @@ const Home: React.FC = () => {
       {/* 1. Map Container */}
       <div className="flex-1 relative overflow-hidden bg-emerald-100">
         <img 
-          src="https://picsum.photos/800/1200?blur=2" 
+          src={`${import.meta.env.BASE_URL}image/picture5.jpg`} 
           alt="Shanhaiguan Map" 
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
