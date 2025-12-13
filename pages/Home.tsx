@@ -60,7 +60,7 @@ const Home: React.FC = () => {
   };
 
   // Generate QR Code URL
-  const currentUrl = window.location.href;
+  const currentUrl = 'https://nanami024.github.io/copy-of-shanhaiguan-smart-guide/';
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&bgcolor=fef3c7&color=991b1b&data=${encodeURIComponent(currentUrl)}`;
 
   return (
