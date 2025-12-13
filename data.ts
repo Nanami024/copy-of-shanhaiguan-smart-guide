@@ -25,7 +25,7 @@ export const appData: AppData = {
       name: "天下第一关",
       x: 45, // Map X coordinate %
       y: 30, // Map Y coordinate %
-      image: "/image/picture1.jpg", // Replace with local image: '/images/spot1.jpg'
+      image: "/public/image/picture1.jpg", // Replace with local image: '/images/spot1.jpg'
       desc: "万里长城－山海关，又称榆关、渝关、临闾关，位于河北省秦皇岛市山海关区东大街1号，是明长城的东北关隘之一，在1990年以前被认为是明长城东端起点，素有中国长城“三大奇观之一”（东有山海关、中有镇北台、西有嘉峪关）、“天下第一关”、“边郡之咽喉，京师之保障”之称，与万里之外的嘉峪关遥相呼应，闻名天下。",
       content: "明洪武十四年（1381年），明太祖朱元璋下令在此筑城建关，遂成为扼东北、华北咽喉要塞的军事重镇，因其依山襟海，故得名山海关。山海关有“天下第一关”的美誉，牌匾为明代著名书法家萧显所书 [22]。山海关城周长约4千米，与长城相连，以城为关，城高14米，厚7米，有四座主要城门，多种防御建筑。包括“天下第一关”箭楼、靖边楼、牧营楼、临闾楼、瓮城以及1350延长米的明代平原长城等景观。1961年3月4日，万里长城－山海关被国务院公布为第一批全国重点文物保护单位。1987年12月，包括万里长城-山海关在内的长城被联合国教科文组织公布为世界文化遗产。",
       audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Replace with local audio
